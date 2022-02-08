@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Compress and Resize</title>
+</head>
+<body>
+    <div class="center">
+        <img src="<%=imageurl%>" width="500" height="500" alt="image not loaded">
+        <br>
+        <hr>
+        <div style="margin: 5px;">
+            <form action="/compress/uploads/<%=filename%>" method="post">
+                <h3>For Compressing the image click on compress Button</h3>
+                <label for="quality">Quality</label>
+                <input type="text" size="50" id="quality" name="quality" 
+               value="80" placeholder="Enter a number between 1 to 100">
+                <input type="submit" value="Compress">
+            </form>
+        </div>
+        <hr>
+        
+        <div  >
+            <h3>For Resizing Your image add your required widht and height</h3>
+            <form action="/resize/uploads/<%=filename%>" method="post">
+                <label for="width">width</label>
+                <input type="text" name="width" value="150" id="width">
+                <label for="height">height</label>
+                <input type="text" name="height" value"150" id="height">
+                <input type="submit" value="Resize">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
